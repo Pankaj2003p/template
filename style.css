@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Mynerve&family=Shantell+Sans:ital,wght@1,300&family=Tourney:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(28, 83, 74);
+    color: aliceblue;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+}
+
+nav .name-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.name-logo .logo img {
+    height: 3rem;
+    width: 3rem;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.name-logo .name p {
+    font-family: Kanit;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li strong:hover {
+    color: red;
+    font-size: 17px;
+}
+
+@keyframes logo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    margin: 22px;
+}
+
+main .text .para h3 {
+    text-transform: uppercase;
+}
+
+main .text {
+    margin-top: 190px;
+    width: 50vw;
+}
+
+main .text .head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    font-size: 45px;
+}
+
+.text .head .naam {
+    color: red;
+}
+
+.text h1 {
+    font-size: 45px;
+}
+
+main .img img {
+    height: 80vh;
+    width: auto;
+    animation-name: manlogo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@media screen and (max-width:960px) {
+    main .img img {
+        display: none;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:665px) {
+    nav{
+        margin-top: 5px;
+        justify-content: center;
+    }
+
+    main .text {
+        margin-top: 100px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    main .text .head {
+        font-size: 30px;
+    }
+
+    nav ul li strong:hover {
+        color: red;
+        font-size: 16px;
+    }
+}
+@keyframes manlogo {
+    from{
+        height: 0vh;
+        width: auto;
+    }
+    to{
+        height: 80vh;
+        width: auto;
+    }
+}
